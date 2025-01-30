@@ -40,7 +40,7 @@ void inp(){
 
 void scc(){
     memset(used, false, sizeof(used));
-    for(int i = 1; i <= n; i++){
+    for(int i = 0; i < n; i++){
         if(!used[i]){
             dfs1(i);
         }

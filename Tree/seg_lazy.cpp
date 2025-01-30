@@ -63,16 +63,14 @@ long long get(int id, int l, int r, int u, int v){
 
 int main(){
     cin >> n;
-    for(int i = 1; i <= n; i++){
-        cin >> a[i];
-    }
+    memset(a, 0, sizeof(a));
     build(1, 1, n);
 
     cin >> q;
     while(q--){
         int type, l, r, val;
         cin >> type >> l >> r;
-        if(type == 1){
+        if(type == 0){
             cin >> val;
             update(1, 1, n, l, r, val);
         }
